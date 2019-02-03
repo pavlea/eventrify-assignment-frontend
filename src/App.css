@@ -1,32 +1,466 @@
 .App {
-  text-align: center;
+  background-color: #f6f5f5;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.event-header {
+  width: 100%;
+  background-color: #81c1e5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.event-header-container {
+  width: 80%;
+  padding: 5% 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.basic-info {
+  margin-top: 25px;
+}
+
+.misc-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.event-name {
+  font-size: 24px;
+}
+
+.countdown {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.event-countdown {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.countdown-box {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: 0 5px;
+  border-radius: 2px;
+  background-color: #9acdea;
+}
+
+.content-container {
+  width: 60%;
+  margin-left: 10%;
+  position: relative;
+  bottom: 300px;
+}
+
+.event-info {
+  background-color: white;
+  padding: 5%;
+  margin-bottom: 5%;
+  border-radius: 15px;
+}
+
+.participants {
+  background-color: white;
+  padding: 5%;
+  border-radius: 15px;
+}
+
+.user-info {
+  margin-bottom: 20px;
+}
+
+.user-form input {
+  width: 60%;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px dotted black;
+}
+
+.user-form label {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.user-form select {
+  width: 60%;
+  height: 30px;
+}
+
+.visa {
+  display: flex;
+  align-items: center;
+}
+
+#visa-check {
+  width: auto;
+  margin-right: 5px;
+}
+
+.active-packages {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.active-package {
+  margin: 5px;
+  padding: 5px 10px;
+  width: 90%;
+  border: 1px dotted blueviolet;
+  display: flex;
+  justify-content: space-between;
+}
+
+.active-package-price {
+  display: flex;
+}
+
+.active-package-price button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.active-package span {
+  text-decoration: line-through;
+}
+
+.package-groups {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.package-group {
+  text-align: center;
+  width: 30%;
+  padding: 5px 0;
+  border: 1px dotted rebeccapurple;
+  cursor: pointer;
+}
+
+.package-options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.package-offer {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 10px 10px;
+  border: 1px dotted rebeccapurple;
+  cursor: pointer;
+}
+
+.package-offer span {
+  text-decoration: line-through;
+}
+
+.accommodation-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.accommodation-1 button {
+  margin: 10px 0;
+  height: 40px;
+  border: none;
+  background-color: blanchedalmond;
+  cursor: pointer;
+}
+
+.accommodation-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrival-departure {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+
+.arrival-departure input {
+  margin-left: 5px;
+  padding: 10px; 
+}
+
+.accommodation-2 button {
+  margin: 10px 0;
+  height: 40px;
+  border: none;
+  background-color: blanchedalmond;
+  cursor: pointer;
+}
+
+.accommodation-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.accommodation-3 button {
+  width: 100%;
+  margin: 10px 0;
+  height: 40px;
+  border: none;
+  background-color: blanchedalmond;
+  cursor: pointer;
+}
+
+.accommodation-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.accommodation-4 button {
+  width: 100%;
+  margin: 10px 0;
+  height: 40px;
+  border: none;
+  background-color: blanchedalmond;
+  cursor: pointer;
+}
+
+.remove-participant {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.remove-participant button {
+  width: 30%;
+  height: 30px;
+  border: none;
+  font-weight: bold;
   color: white;
+  background-color: darkred;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.add-participant {
+  width: 100%;
+  margin: 20px 0;
+  height: 50px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  background-color: darkturquoise;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.payment {
+  background-color: white;
+  margin-top: 40px;
+  padding: 5%;
+  border-radius: 15px;
+}
+
+.enter-payment {
+  font-size: 28px;
+  padding: 10px 0;
+}
+
+.choose-account {
+  padding: 10px 0;
+}
+
+.account-type {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+.account-type-option {
+  padding: 10px 0;
+}
+
+.account-type-option > div {
+  padding: 15px 30px;
+}
+
+.account-type-option select {
+  width: 60%;
+  height: 30px;
+}
+
+.company-account-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-account-form input {
+  width: 60%;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px dotted black;
+}
+
+.order-summary {
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.order-no-items {
+  font-size: 32px;
+  padding: 5px 0;
+}
+
+.total-charge {
+  font-size: 32px;
+  padding: 15px 0;
+}
+
+.no-package-group-selected {
+  border: 1px dotted rosybrown;
+  margin: 20px 0;
+  padding: 10px 5px;
+}
+
+#order-category-names {
+  border-bottom: 1px solid black;
+}
+
+.order-categories {
+  display: flex;
+  margin: 20px 0;
+  border-bottom: 1px dotted black;
+}
+
+.order-qty {
+  width: 15%;
+}
+
+.minisummary {
+  background-color: white;
+  width: 250px;
+  height: 300px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  left: 72%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.mini-sign-in {
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px dotted grey;
+  color: grey;
+}
+
+.mini-order-summary {
+  padding: 10px 5px;
+  border-bottom: 2px dotted grey;
+}
+
+.mini-info {
+  padding: 20px 10px;
+}
+
+.sign-in {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sign-in-please {
+  font-size: 24px;
+  color: grey;
+}
+
+.sign-in-explanation {
+  width: 75%;
+  text-align: center;
+}
+
+.modal-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.modal-sign-in {
+  font-size: 32px;
+}
+
+.create-new-account {
+  cursor: pointer;
+}
+
+.social-networks {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-network {
+  border: 1px dashed grey;
+  padding: 2% 20%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-in-form {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sign-in-field {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid grey;
+  padding: 10px 0;
+}
+
+.forgot-password {
+  width: 100%;
+  font-size: 12px;
+  text-align: right;
+}
+
+.sign-in-form button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  color: white;
+  background-color: #9acdea;
+  cursor: pointer;
+}
+
+.sign-in-stay {
+  width: 100%;
+}
+
+.legal {
+  cursor: pointer;
+  font-size: 12px;
 }
